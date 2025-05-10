@@ -16,3 +16,5 @@ CloudFlare构建项目，不能全局安装依赖，package.json中的script应�
     "server": "npx hexo server"
   },
 ```
+
+并且CloudFlare中的构建命令中也不能直接执行hexo命令，应该替换为`npm run build`来执行package.json中定义的命令。

@@ -1,3 +1,10 @@
+# 主题作为子模块添加
+
+```
+touch .gitmodules
+git submodule add https://github.com/yuang01/hexo-theme-bamboo.git themes/hexo-theme-bamboo
+```
+
 # 同步构建
 
 CloudFlare不会自动拉取submodule来构建项目，需要通过一下命令：

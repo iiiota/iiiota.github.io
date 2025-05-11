@@ -357,7 +357,7 @@ homePostImgsPosition:
 # --------------------------------------------------------------------------------
 # 灯笼
 lantern:
-  on: true
+  on: false
   left: '' # 左边灯笼的文字， 空字符串则没有文字
   right: '' # 右边灯笼的文字
 
@@ -563,7 +563,7 @@ utterance:
 # https://beaudar.lipk.org/
 beaudar:
   on: true
-  repo: https://github.com/iiiota/iiiota.github.io # 填写仓库名字，格式：你的用户 ID/ 仓库名称，如：yuang01/yuang01.github.io
+  repo: iiiota/iiiota.github.io # 填写仓库名字，格式：你的用户 ID/ 仓库名称，如：yuang01/yuang01.github.io
   issue-term: pathname
   issue-number:
   branch: main   # 根据仓库选择，如果主分支是master，则这里写master

@@ -3,19 +3,21 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Hi, iiiota 😊
 subtitle: ''
-description: ''
+description: '千磨万击还坚劲，任尔东西南北风'
 keywords:
-author: John Doe
-language: en
+author: iiiota
+language: zh-CN
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: http://iiiota.github.io
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
+  post: post
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
@@ -36,24 +38,32 @@ default_layout: post
 titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
-  field: site # Apply to the whole site
+  field: site # Apply to the whole site, post则仅对文章生效
   exclude: ''
-filename_case: 0
-render_drafts: false
-post_asset_folder: false
-relative_link: false
-future: true
-syntax_highlighter: highlight.js
+filename_case: 0  # 1: 文件名小写 2:文件名大写
+render_drafts: false  # 是否显示草稿
+post_asset_folder: false  # 启用资源文件夹
+relative_link: false      # 链接是否为相对根目录的相对地址
+future: true              # 显示未来的文章
+syntax_highlighter: highlight.js  # 代码块高亮设置，内置支持highlight.js、prismjs
 highlight:
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
-prismjs:
+prismjs:                          # 代码块设置
   preprocess: true
   line_number: true
   tab_replace: ''
+
+search:
+  path: search.xml
+  field: post
+
+permalink_pinyin:
+  enable: true
+  separator: '-'
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -80,7 +90,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
+updated_option: false # 'mtime'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -99,7 +109,18 @@ ignore:
 ## 默认：landscape
 theme: hexo-theme-bamboo
 
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-deploy: https://github.com/iiiota/iiiota.github.io.git
-type: 'main'
+deploy:
+  type: git
+  repo: https://github.com/iiiota/iiiota.github.io.git

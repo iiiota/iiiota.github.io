@@ -6,7 +6,8 @@
     "build": "npx hexo generate",
     "clean": "npx hexo clean",
     "deploy": "npx hexo deploy",
-    "server": "npx hexo server"
+    "server": "npx hexo server",
+    "update": "git submodule update --remote --recursive"
   },
   "hexo": {
     "version": "7.3.0"

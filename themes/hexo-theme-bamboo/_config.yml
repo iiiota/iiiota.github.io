@@ -2,63 +2,84 @@
 
 # 菜单
 menu:
-  🧧2024祝您:
-    url: /
-    # icon: fa fa-home
-  # 📄文档: # 这是二级菜单的写法
-  💃团团:
-  #  icon: fa fa-link
-   children:
-    - name: 基本配置
-      url: /post/hexo-theme-bamboo-new
-      # icon: fa fa-music
-    - name: 页面功能配置
-      url: /post/hexo-theme-bamboo/page/
-      # icon: fa fa-film
-    - name: Front-matter介绍
-      url: /post/hexo-theme-bamboo/front-matter/
-      # icon: fa fa-film
-    - name: 内置标签
-      url: /post/hexo-theme-bamboo/tags/
-    - name: 侧边栏
-      url: /post/hexo-theme-bamboo/sidebar/
+  # 🧧2024祝您:
+  #   url: /
+  #   # icon: fa fa-home
+  # # 📄文档: # 这是二级菜单的写法
+  # 💃团团:
+  # #  icon: fa fa-link
+  #  children:
+  #   - name: 基本配置
+  #     url: /post/hexo-theme-bamboo-new
+  #     # icon: fa fa-music
+  #   - name: 页面功能配置
+  #     url: /post/hexo-theme-bamboo/page/
+  #     # icon: fa fa-film
+  #   - name: Front-matter介绍
+  #     url: /post/hexo-theme-bamboo/front-matter/
+  #     # icon: fa fa-film
+  #   - name: 内置标签
+  #     url: /post/hexo-theme-bamboo/tags/
+  #   - name: 侧边栏
+  #     url: /post/hexo-theme-bamboo/sidebar/
   # Archives:
-  🧨圆圆:
+  存档:
     url: /archives
-    # icon: fa fa-archive
+    icon: fa fa-archive
   # Tags:
-  🎈开开:
+  标签:
     url: /tags
-    # icon: fa fa-tags
+    icon: fa fa-tags
   # Categories:
-  🪅心心:
+  分类:
     url: /categories
-    # icon: fa fa-bookmark
-  # About:
-  🎀福星:
-    url: /about
-    # icon: fa fa-user
-  # Friends:
-  🧣高照:
-    url: /huoban
-  # 留言板:
-  🧰事事:
-    url: /messageBoard
-    # icon: fas fa-comment-dots
-  # 🐱更多: # 这是二级菜单的写法
-  🛠️工具:
-  #  icon: fa fa-link
+    icon: fa fa-bookmark
+  # # About:
+  # 🎀福星:
+  #   url: /about
+  #   # icon: fa fa-user
+  # # Friends:
+  # 🧣高照:
+  #   url: /huoban
+  # # 留言板:
+  # 🧰事事:
+  #   url: /messageBoard
+  #   # icon: fas fa-comment-dots
+  # # 🐱更多: # 这是二级菜单的写法
+  编辑:
+    icon: fas fa-edit
+    children:
+     - name: 主题
+       url: /post/hexo-theme-bamboo-new
+       icon: fas fa-cog
+     - name: 文章
+       url: /post/hexo-theme-bamboo/page/
+       icon: fas fa-list
+  更多:
+   icon: fa fa-link
    children:
-    - name: 📷图库
-      url: /gallery
-      # icon: fa fa-music
-    - name: 👪简单说一说
-      url: /talk
-      # icon: fa fa-film
-    - name: 🧒🏻关于我
+    # - name: 📷图库
+    #   url: /gallery
+    #   icon: fa fa-music
+    # - name: 👪简单说一说
+    #   url: /talk
+    #   icon: fa fa-film
+    - name: 关于我
       url: /about
-    - name: 💡图床
+      icon: fas fa-user
+    - name: 本站
+      url: /site
+      icon: fas fa-gavel
+    - name: 图床
       url: https://telegraph-image-ydn.pages.dev/
+      icon: fas fa-images
+    - name: 图标库
+      url: https://fontawesome.com/icons
+      icon: fas fa-font-awesome
+    - name: Cloudflare
+      url: https://dash.cloudflare.com/
+      icon: fas fa-cloud
+
       # icon: fa fa-film
 
 # github地址, 头部导航右上角的github链接
@@ -390,7 +411,7 @@ baiduPush: true
 # --------------------------------------------------------------------------------
 # 音乐
 music:
-  on: true
+  on: false
   autoHide: true    # hide automaticaly
   server: netease   # require music platform: netease, tencent, kugou, xiami, baidu
   type: song    # require song, playlist, album, search, artist

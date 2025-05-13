@@ -187,3 +187,87 @@ git clone https://github.com/USERNAME/REPO.git
 - origin: 自动指向远程仓库地址。
 - master: 指向本地分支的最新提交，或main。
 - origin/master: 标记本地master分支的拉取时状态，无法改变。
+
+```bash
+# 拉取远程分支，自动合并
+git pull
+git pull origin dev
+
+# 下载远程有但本地没有的所有信息，不自动合并
+git fetch origin
+# 必须手动合并
+git merge origin
+```
+
+提示：
+- `git fetch origin` : 协作时，别人的提交可能和本地产生冲突，fetch可以更好的解决冲突。
+
+
+## 推送
+
+```bash
+# 推送到远程仓库
+git push origin dev
+# 删除远程仓库中的分支
+git push origin -d dev
+
+# 删除远程标签
+git push origin --delete v1.2
+# 推送标签
+git push origin v1.2
+```
+
+
+## 变基
+
+详见：[https://git-scm.com/book/zh/v2/Git-%e5%88%86%e6%94%af-%e5%8f%98%e5%9f%ba](https://git-scm.com/book/zh/v2/Git-%e5%88%86%e6%94%af-%e5%8f%98%e5%9f%ba)
+
+和 `merge` 类似，用于整合不同分支的修改。
+
+区别：
+- `merge` : 将两分支的最新快照和最近的公共祖先快照进行三方合并，并生成一个新的快照提交。
+- `rebase` : 找到当前分支自最近公共祖先之后的所有修改（提取为临时文件），然后当前分支指向目标分支，再依次应用修改（提交历史更简洁）。
+
+案例：
+
+![basic-rebase-1.png](https://telegraph-image-ydn.pages.dev/api/rfile/basic-rebase-1.png)
+
+```bash
+# merge
+git checkout master
+git merge experiment
+```
+
+![basic-rebase-2.png](https://telegraph-image-ydn.pages.dev/api/rfile/basic-rebase-2.png)
+
+```bash
+# rebase: experiment分支的修改变基到master上
+git checkout experiment
+git rebase master
+```
+
+![basic-rebase-3.png](https://telegraph-image-ydn.pages.dev/api/rfile/basic-rebase-3.png)
+
+```bash
+# 回到master分支，进行一次快进合并
+git checkout master
+git merge experiment
+git push
+```
+
+![basic-rebase-4.png](https://telegraph-image-ydn.pages.dev/api/rfile/basic-rebase-4.png)
+
+```bash
+
+# 变基发生冲突时,先解决冲突,再继续
+$ git mergetool
+$ git rebase --continue
+# 利用变基来整合提交
+$ git rebase 版本号	# 合并当前到指定版本再提交
+$ git rebase HEAD-3	  # 合并当前版本的最近3个版本再提交
+```
+
+
+### 变基风险
+
+如果提交存在于你的仓库之外，而别人可能基于这些提交进行开发，那么不要执行变基。

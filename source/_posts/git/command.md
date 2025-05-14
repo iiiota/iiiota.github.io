@@ -258,7 +258,6 @@ git push
 ![basic-rebase-4.png](https://telegraph-image-ydn.pages.dev/api/rfile/basic-rebase-4.png)
 
 ```bash
-
 # 变基发生冲突时,先解决冲突,再继续
 $ git mergetool
 $ git rebase --continue

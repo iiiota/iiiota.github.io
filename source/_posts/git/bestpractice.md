@@ -43,5 +43,40 @@ git remote show origin
 
 ## 变基
 
+- 优先选择 `merge` 。
 - 不要在 `master` / `main` 分支上 rebase，这是默认分支。
-- 总是在本地分支上 rebase，没有推送到远程仓库，不会影响协作。
+- 总是在本地分支上 rebase，在远程也有的分支上进行 `rebase` 很可能会影响协作。
+
+
+## 依赖仓库
+
+推荐使用 `subtree` ，而不是 `submodule` 。
+
+- `submodule` : 仅保存子模块的引用而不保存其代码，无法修改提交到子模块仓库，未提供直接删除子模块的命令。
+- `subtree` : 主仓库会克隆一份依赖仓库代码，可对主仓库和依赖仓库进行修改提交。
+
+```bash
+# 添加依赖仓库
+git remote add SUBTREE-ORIGIN https://github.com/USERNAME/SUBTREE.git
+git remote show
+git subtree add --prefix=SUBTREE_FOLDER SUBTREE-ORIGIN master --squash
+git push
+
+# 拉取依赖仓库
+git subtree pull --prefix=SUBTREE_FOLDER SUBTREE-ORIGIN master --squash
+# 推送依赖仓库修改到依赖仓库
+git subtree push --prefix=SUBTREE_FOLDER SUBTREE-ORIGIN master
+# 切割部分代码来作为新的依赖仓库（会统计所有相关提交信息）
+git subtree split --prefix=SUBTREE_FOLDER SUBTREE-ORIGIN master
+# 依赖仓库日志
+git log SUBTREE-ORIGIN
+```
+
+## 误提交
+
+`cherry-pick` 的目标场景用于处理本应在其他分支上进行的误提交。
+
+```bash
+# 按提交顺序先后应用，会依次生成提交
+git cherry-pick HASHCODE
+```

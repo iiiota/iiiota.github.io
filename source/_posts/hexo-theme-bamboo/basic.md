@@ -3,6 +3,7 @@ title: basic
 date: 2025-05-15 00:22:52
 tags:
   - Bamboo
+  - Markdown
 categories:
   - [Bamboo]
 ---

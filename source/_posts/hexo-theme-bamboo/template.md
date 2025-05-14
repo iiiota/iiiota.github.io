@@ -35,6 +35,15 @@ categories:
 {% pdf  /asset/pdf/test.pdf %}
 
 
+## 音频
+
+```
+{% audio /asset/audio/test.mp3 %}
+```
+
+{% audio /asset/audio/test.mp3 %}
+
+
 ## 视频
 
 ```
@@ -169,6 +178,7 @@ categories:
 {% pbg danger, 文本块 %}
 {% pbg success, 文本块 %}
 
+
 ### 段落
 
 ```
@@ -202,6 +212,115 @@ categories:
 {% p center large danger, 文本段落 %}
 {% p center large info, 文本段落 %}
 {% p center small, 文本段落 %}
+
+
+## 按钮
+
+```
+{% btn 按钮, / %} {% btn warning, 按钮, / %} {% btn info, 按钮, / %}  {% btn success, 按钮, / %}  {% btn danger, 按钮, / %}
+{% btn hollow, Github, https://github.com/, fab fa-github %}
+{% btn solid, Stackoverflow, https://stackoverflow.com/, fab fa-stack-overflow %}
+{% btn large round solid warning, 开始使用, https://baidu.com, fa fa-download %}
+{% btn large round solid info, 开始使用, https://baidu.com, fa fa-download %}
+{% btn large round solid success, 开始使用, https://baidu.com, fa fa-download %}
+{% btn large round solid danger, 开始使用, https://baidu.com, fa fa-download %}
+{% btn large solid success, 开始使用, https://baidu.com, fa fa-download %}
+{% btn large warning hollow, 开始使用, https://baidu.com, fa fa-download %}
+{% btn large info hollow, 开始使用, https://baidu.com, fa fa-download %}
+{% btn large success hollow, 开始使用, https://baidu.com, fa fa-download %}
+{% btn large danger hollow, 开始使用, https://baidu.com, fa fa-download %}
+{% btn success hollow, 开始使用, https://baidu.com, fa fa-download %}
+```
+
+{% btn 按钮, / %} {% btn warning, 按钮, / %} {% btn info, 按钮, / %}  {% btn success, 按钮, / %}  {% btn danger, 按钮, / %}
+{% btn hollow, Github, https://github.com/, fab fa-github %}
+{% btn solid, Stackoverflow, https://stackoverflow.com/, fab fa-stack-overflow %}
+{% btn large round solid warning, 开始使用, https://baidu.com, fa fa-download %}
+{% btn large round solid info, 开始使用, https://baidu.com, fa fa-download %}
+{% btn large round solid success, 开始使用, https://baidu.com, fa fa-download %}
+{% btn large round solid danger, 开始使用, https://baidu.com, fa fa-download %}
+{% btn large solid success, 开始使用, https://baidu.com, fa fa-download %}
+{% btn large warning hollow, 开始使用, https://baidu.com, fa fa-download %}
+{% btn large info hollow, 开始使用, https://baidu.com, fa fa-download %}
+{% btn large success hollow, 开始使用, https://baidu.com, fa fa-download %}
+{% btn large danger hollow, 开始使用, https://baidu.com, fa fa-download %}
+{% btn success hollow, 开始使用, https://baidu.com, fa fa-download %}
+
+```
+{% btn center large, 百度一下, https://baidu.com, fa fa-download %}
+{% btn center large round solid, 开始下载, https://baidu.com, fa fa-download %}
+```
+
+{% btn center large, 百度一下, https://baidu.com, fa fa-download %}
+{% btn center large round solid, 开始下载, https://baidu.com, fa fa-download %}
+
+```
+{% btns circle grid4 %}
+  {% cell QQ头像, https://baidu.com, http://q1.qlogo.cn/g?b=qq&nk=1730241541&s=640 %}
+  {% cell QQ头像, https://baidu.com, http://q1.qlogo.cn/g?b=qq&nk=1730241541&s=640 %}
+  {% cell QQ头像, https://baidu.com, http://q1.qlogo.cn/g?b=qq&nk=1730241541&s=640 %}
+  {% cell QQ头像, https://baidu.com, http://q1.qlogo.cn/g?b=qq&nk=1730241541&s=640 %}
+{% endbtns %}
+```
+
+{% btns circle grid4 %}
+  {% cell QQ头像, https://baidu.com, http://q1.qlogo.cn/g?b=qq&nk=1730241541&s=640 %}
+  {% cell QQ头像, https://baidu.com, http://q1.qlogo.cn/g?b=qq&nk=1730241541&s=640 %}
+  {% cell QQ头像, https://baidu.com, http://q1.qlogo.cn/g?b=qq&nk=1730241541&s=640 %}
+  {% cell QQ头像, https://baidu.com, http://q1.qlogo.cn/g?b=qq&nk=1730241541&s=640 %}
+{% endbtns %}
+
+```
+{% btns rounded grid4 %}
+  {% cell 下载源码, /, fa fa-download %}
+  {% cell 查看文档, /, fa fa-book %}
+  {% cell 下载源码, /, fa fa-download %}
+  {% cell 查看文档, /, fa fa-book %}
+{% endbtns %}
+```
+
+{% btns rounded grid4 %}
+  {% cell 下载源码, /, fa fa-download %}
+  {% cell 查看文档, /, fa fa-book %}
+  {% cell 下载源码, /, fa fa-download %}
+  {% cell 查看文档, /, fa fa-book %}
+{% endbtns %}
+
+
+## 进度条
+
+```
+{% progress 70 danger 进度条测试 %}
+{% progress 60 info 进度条测试 %}
+{% progress 60 success 进度条测试 %}
+{% progress 60 warning 进度条测试 %}
+{% progress 60 primary 进度条测试 %}
+{% progress 60 #000 进度条测试 %}
+{% progress 60 #2f54eb 进度条测试 %}
+```
+
+{% progress 70 danger 进度条测试 %}
+{% progress 60 info 进度条测试 %}
+{% progress 60 success 进度条测试 %}
+{% progress 60 warning 进度条测试 %}
+{% progress 60 primary 进度条测试 %}
+{% progress 60 #000 进度条测试 %}
+{% progress 60 #2f54eb 进度条测试 %}
+
+```
+{% progressCircle 70 danger 进度条测试 %}
+{% progressCircle 80 info 进度条测试 %}
+{% progressCircle 60 success 进度条测试 %}
+{% progressCircle 70 #12e9e9 70% %}
+{% progressCircle 70 skyblue 70% %}
+```
+
+{% progressCircle 70 danger 进度条测试 %}
+{% progressCircle 80 info 进度条测试 %}
+{% progressCircle 60 success 进度条测试 %}
+{% progressCircle 70 #12e9e9 70% %}
+{% progressCircle 70 skyblue 70% %}
+
 
 ## 页签栏
 
@@ -251,7 +370,7 @@ categories:
 {% endsitegroup %}
 
 
-## 选择框
+## 单选框
 
 ```
 {% radio 测试文字。 %}
@@ -266,6 +385,33 @@ categories:
 {% radio yellow, 测试文字。 %}
 {% radio warning, 测试文字。 %}
 {% radio checked, 测试文字。 %}
+
+
+## 复选框
+
+```
+{% checkbox 测试文字。 %}
+{% checkbox checked, 支持简单的 [markdown](https://guides.github.com/features/mastering-markdown/) 语法 %}
+{% checkbox red, 测试文字。 %}
+{% checkbox green checked, 绿色 + 默认选中 %}
+{% checkbox yellow checked, 黄色 + 默认选中 %}
+{% checkbox cyan checked, 青色 + 默认选中 %}
+{% checkbox blue checked, 蓝色 + 默认选中 %}
+{% checkbox plus green checked, 增加 %}
+{% checkbox minus yellow checked, 减少 %}
+{% checkbox times red checked, 叉 %}
+```
+
+{% checkbox 测试文字。 %}
+{% checkbox checked, 支持简单的 [markdown](https://guides.github.com/features/mastering-markdown/) 语法 %}
+{% checkbox red, 测试文字。 %}
+{% checkbox green checked, 绿色 + 默认选中 %}
+{% checkbox yellow checked, 黄色 + 默认选中 %}
+{% checkbox cyan checked, 青色 + 默认选中 %}
+{% checkbox blue checked, 蓝色 + 默认选中 %}
+{% checkbox plus green checked, 增加 %}
+{% checkbox minus yellow checked, 减少 %}
+{% checkbox times red checked, 叉 %}
 
 
 ## NoteBlock
@@ -472,39 +618,72 @@ categories:
 </div>
 
 
-## Github卡片
+## 折叠
 
-
-### 单张卡片
-
-```
-{% ghcard iiiota %}
-```
-
-{% ghcard iiiota %}
-
-
-### 表格卡片
+### 文本
 
 ```
-| {% ghcard iiiota %} | {% ghcard iiiota, theme=vue %} |
-| -- | -- |
-| {% ghcard iiiota, theme=buefy %} | {% ghcard iiiota, theme=solarized-light %} |
-| {% ghcard iiiota, theme=onedark %} | {% ghcard iiiota, theme=solarized-dark %} |
+{% folding cyan open, 查看默认打开的折叠框 %}
+  这是一个默认打开的折叠框。
+{% endfolding %}
 ```
 
-| {% ghcard iiiota %} | {% ghcard iiiota, theme=vue %} |
-| -- | -- |
-| {% ghcard iiiota, theme=buefy %} | {% ghcard iiiota, theme=solarized-light %} |
-| {% ghcard iiiota, theme=onedark %} | {% ghcard iiiota, theme=solarized-dark %} |
+{% folding cyan open, 查看默认打开的折叠框 %}
+  这是一个默认打开的折叠框。
+{% endfolding %}
 
-
-### 项目卡片
+### 列表
 
 ```
-{% ghcard iiiota/hexo-theme-bamboo %}
-{% ghcard iiiota/hexo-theme-bamboo %}
+{% folding yellow, 查看列表测试 %}
+  - item1
+  - item2
+{% endfolding %}
 ```
 
-{% ghcard iiiota/hexo-theme-bamboo %}
-{% ghcard iiiota/hexo-theme-bamboo %}
+{% folding yellow, 查看列表测试 %}
+  - item1
+  - item2
+{% endfolding %}
+
+### 代码
+
+{% folding green, 查看代码测试 %}
+```bash
+npm install xxx
+```
+{% endfolding %}
+
+### 图片
+
+```
+{% folding 查看图片测试 %}
+  {% image https://pic3.zhimg.com/80/v2-08d7fdf0201e560c22a2e9d9c2c040f6_1440w.jpg?source=1940ef5c, width=400px, alt=自定义名 %}
+{% endfolding %}
+```
+
+{% folding 查看图片测试 %}
+  {% image https://pic3.zhimg.com/80/v2-08d7fdf0201e560c22a2e9d9c2c040f6_1440w.jpg?source=1940ef5c, width=400px, alt=自定义名 %}
+{% endfolding %}
+
+### 嵌套
+
+```
+{% folding red open, 查看嵌套测试 %}
+{% folding blue, 查看嵌套测试2 %}
+{% folding 查看嵌套测试3 %}
+描述文本
+<span><img src='https://image.dbbqb.com/202101221115/7cdd741907c2ea150d054d24c4da6594/4d0G' ></span>
+{% endfolding %}
+{% endfolding %}
+{% endfolding %}
+```
+
+{% folding red open, 查看嵌套测试 %}
+{% folding blue, 查看嵌套测试2 %}
+{% folding 查看嵌套测试3 %}
+描述文本
+<span><img src='https://image.dbbqb.com/202101221115/7cdd741907c2ea150d054d24c4da6594/4d0G' ></span>
+{% endfolding %}
+{% endfolding %}
+{% endfolding %}

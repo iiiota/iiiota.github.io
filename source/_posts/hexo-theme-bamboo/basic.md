@@ -6,6 +6,7 @@ tags:
   - Markdown
 categories:
   - [Bamboo]
+mathjax: true
 ---
 
 
@@ -67,6 +68,15 @@ categories:
 
 - [ ] 待办
 - [x] 已完成
+
+--------------------
+
+```
+# 数学公式，需要在文章中设置 mathjax: true
+$\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$
+```
+
+$\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$
 
 --------------------
 

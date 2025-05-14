@@ -2,9 +2,9 @@
 title: bat
 date: 2025-05-14 12:07:25
 tags:
-  - bat
+  - Bat
 categories:
-  - [ Windows10, bat]
+  - [ Windows10, Bat]
 ---
 
 

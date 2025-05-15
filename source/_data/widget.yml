@@ -90,7 +90,7 @@ home_widget:
   - class_name: mymusic
     id_name: mymusic
     order: -1
-    name: 龙年大吉😙
+    name: Nerver give up!
     icon: fa-solid fa-music
     icon_color: '#fb473b'
     url: https://www.bilibili.com/video/BV1Cg4y187uN/?spm_id_from=333.337.search-card.all.click&vd_source=d2cf63a472ea216df2b048af502838e5

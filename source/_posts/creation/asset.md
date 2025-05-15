@@ -14,11 +14,24 @@ categories:
 # 资产
 
 
+## 字体
+
+- [https://fonts.google.com/](https://fonts.google.com/)
+
+
 ## 图片
 
 - [https://www.pexels.com/](https://www.pexels.com/)
 - [https://pixabay.com/](https://pixabay.com/)
 - [https://gratisography.com/](https://gratisography.com/)
+
+
+## 图标
+
+- [https://fonts.google.com/](https://fonts.google.com/)
+- [https://fontawesome.com/](https://fontawesome.com/)
+- [https://ionic.io/ionicons](https://ionic.io/ionicons)
+- [https://yesicon.app/](https://yesicon.app/)
 
 美食：
 - [https://www.foodiesfeed.com/](https://www.foodiesfeed.com/)

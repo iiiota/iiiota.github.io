@@ -646,6 +646,9 @@ tagDetail:
   full: false
   video: ''
   background: '' # red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")
+  tagImg:
+    Git: https://telegraph-image-ydn.pages.dev/api/rfile/git-banner.png
+    Creation: https://telegraph-image-ydn.pages.dev/api/rfile/creative-banner.jpeg
 
 # --------------------------------------------------------------------------------
 # 分类页面，配置同上

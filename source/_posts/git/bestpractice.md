@@ -42,6 +42,25 @@ git remote show origin
 ```
 
 
+## 比较差异
+
+```
+# 工作区修改
+git diff
+git diff FILE_NAME
+
+# 暂存区修改
+git diff --cached
+git diff --staged
+
+# 提交版本
+git diff HASH_VALUE
+
+# 指定文件指定提交的差异
+git diff HASH_VALUE FILE_NAME
+```
+
+
 ## 变基
 
 - 优先选择 `merge` 。

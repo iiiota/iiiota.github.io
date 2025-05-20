@@ -60,3 +60,20 @@ let html = ejs.render('<%= people.join(", "); %>', {people: people});
   <% }); %>
 </ul>
 ```
+
+
+## 流程控制
+
+ejs支持循环和条件语句。
+
+```
+<% if (products.length > 0) { %>
+    <ul>
+        <% products.forEach(product => { %>
+            <li><%= product.name %> - ₹<%= product.price %></li>
+        <% }) %>
+    </ul>
+<% } else { %>
+    <p>No products available</p>
+<% } %>
+```

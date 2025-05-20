@@ -652,6 +652,8 @@ tagDetail:
     Github: https://telegraph-image-ydn.pages.dev/api/rfile/github-banner.jpg
     Markdown: https://telegraph-image-ydn.pages.dev/api/rfile/markdown-banner.png
     Asset: https://telegraph-image-ydn.pages.dev/api/rfile/asset-banner.png
+    Hexo: https://telegraph-image-ydn.pages.dev/api/rfile/hexo-banner.jpg
+
 
 # --------------------------------------------------------------------------------
 # 分类页面，配置同上

@@ -5,7 +5,7 @@ tags:
   - Python
   - DataStruct
 categories:
-  - [ Python ]
+  - [ Python, DataStruct ]
 ---
 
 > 数据结构，集合。

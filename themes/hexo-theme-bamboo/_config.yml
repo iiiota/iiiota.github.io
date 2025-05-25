@@ -630,7 +630,7 @@ archive:
 # 标签页面，配置同上
 tag:
   title: 'tags'
-  img: 'https://pic2.zhimg.com/80/v2-bf6c555e7c61a57ba4a1fd95a9a32975_1440w.jpg' # 标签页上面的图片
+  img: 'https://api.btstu.cn/sjbz/api.php'  #'https://pic2.zhimg.com/80/v2-bf6c555e7c61a57ba4a1fd95a9a32975_1440w.jpg' # 标签页上面的图片
   desc: '愿你如风，被人温柔以待'
   full: false # 标签页上面的图片是否全屏显示
   video: '' # 如果有值，则在屏幕大于920px的时候，全屏显示视频
@@ -659,7 +659,7 @@ tagDetail:
 # 分类页面，配置同上
 categories:
   title: 'categories'
-  img: 'https://pic2.zhimg.com/80/v2-7c496c95897fb15768593cc5170c8b1a_1440w.jpg?source=1940ef5c'
+  img: 'https://api.btstu.cn/sjbz/api.php'  #'https://pic2.zhimg.com/80/v2-7c496c95897fb15768593cc5170c8b1a_1440w.jpg?source=1940ef5c'
   desc: '愿你如风，被人温柔以待'
   full: false
   video: ''
@@ -716,8 +716,8 @@ color_scheme:
     # 也可以是颜色字符串（例如'#C7EDCC', 或者rgba(0 ,0 ,0, 0.8) 那么会使用该颜色作为背景）
     # 空字符串则背景颜色为透明
     bgImg: [
-      'https://pica.zhimg.com/80/v2-292e6340491bd97f9d014d6be3371c04_1440w.jpg',
-      'https://pica.zhimg.com/80/v2-9659f2305acb80f25ced33aa980092c1_1440w.jpg',
+      # 'https://pica.zhimg.com/80/v2-292e6340491bd97f9d014d6be3371c04_1440w.jpg',
+      # 'https://pica.zhimg.com/80/v2-9659f2305acb80f25ced33aa980092c1_1440w.jpg',
       'https://api.btstu.cn/sjbz/api.php',
     ]
     # 背景图幻灯片模式--延迟时间

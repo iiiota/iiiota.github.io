@@ -3,8 +3,9 @@ title: basic
 date: 2025-05-20 21:27:14
 tags:
   - Swift
+  - Basic
 categories:
-  - [ Swift]
+  - [ Swift ]
 ---
 
 > Swift语言是类型安全的语言。

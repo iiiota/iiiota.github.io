@@ -121,10 +121,39 @@ except OSError:
 
 ### 自定义清理操作
 
+`try` 结束前执行的最后一项任务，不论是否触发异常。
+
 ```python
 try:
     raise KeyboardInterrupt
-# 总是执行
 finally:
     print('Goodbye, world!')
+```
+
+- `finally` 中若包含 `break` `continue` `return` 语句，异常将不会被重新触发。
+- `try` 中若执行到 `break` `continue` `return` 语句，`finally` 语句将在其之前执行。
+- 若 `finally` 包含 `reutrn` 语句，返回值则来自 `finally`，而不是 `try` 中的 `return`。
+
+```python
+def bool_return():
+    try:
+        return True
+    finally:
+        return False
+
+bool_return()   # False
+
+def divide(x, y):
+    try:
+        result = x / y
+    except ZeroDivisionError:
+        print("division by zero!")
+    else:
+        print("result is", result)
+    finally:        # 重新触发异常
+        print("executing finally clause")
+
+divide(2, 1)
+divide(2, 0)
+divide("2", "1")
 ```

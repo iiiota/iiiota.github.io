@@ -82,3 +82,49 @@ except NameError:
     print('An exception flew by!')
     raise
 ```
+
+
+## 异常链
+
+一个未处理的异常发生在 `except` 部分内，它将会有被处理的异常附加到它上面。
+
+```python
+try:
+    open("database.sqlite")
+except OSError:
+    raise RuntimeError("unable to handle error")
+```
+
+可选 `from` 子句，表明异常是另一个异常的直接后果：
+
+```python
+def func():
+    raise ConnectionError
+
+try:
+    func()
+except ConnectionError as exc:
+    raise RuntimeError('Failed to open database') from exc
+
+# 异常链中断
+try:
+    open('database.sqlite')
+except OSError:
+    raise RuntimeError from None
+```
+
+
+## 自定义异常
+
+异常都应从 Exception 类派生。命名都以 “Error” 结尾，类似标准异常的命名。模块都应该自定义其相关的异常。
+
+
+### 自定义清理操作
+
+```python
+try:
+    raise KeyboardInterrupt
+# 总是执行
+finally:
+    print('Goodbye, world!')
+```

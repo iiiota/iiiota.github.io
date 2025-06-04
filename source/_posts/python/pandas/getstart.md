@@ -178,3 +178,85 @@ pip install "pandas[compression]"
 
 - Zstandard：Zstandard compression
 
+
+## 数据类型
+
+表格数据，定义内部类型有：
+- `DataFrame`：二维数据结构，column可以存储的数据类型包括 字符、整型、浮点、分类数据等；
+- `Series`：DateFrame中的每一column都是一个Series
+
+```python
+import pandas as pd
+
+# 手动创建，column lable分别是 Name Age Sex
+pd.DataFrame(
+    {
+        "Name": ["Aric", "Frank", "Max"],
+        "Age": [22, 18, 30],
+        "Sex": ["male", "male", "female"],
+    }
+)
+
+# 访问Series
+df["Age"]
+df.Age
+
+# 创建Series
+ages = pd.Series([22, 18, 30], name="Age")
+
+# 常见数据操作，很多方法都会返回DataFrame或Series
+df["Age"].max() # 最大值
+df.describe()   # 描述信息概览
+```
+
+
+## 读写
+
+
+### DataFrame
+
+pandas支持很多不同文件格式或数据源：csv、excel、sql、json、parquet等。
+
+```python
+import pandas as pd
+
+# pd.read_*
+titanic = pd.read_csv("data/titanic.csv")
+titanic             # 打印前后5行
+titanic.head(5)     # 前5行
+titanic.tail(5)     # 后5行
+titanic.dtypes      # column数据类型
+titanic.info()      # 技术总结信息
+
+# pd.to_*
+titanic.to_excel("titanic.xlsx", sheet_name="passengers", index=False)
+```
+
+
+### Series
+
+```python
+import pandas as pd
+
+titanic = pd.read_csv("data/titanic.csv")
+ages = titanic["Age"]
+ages.head()
+type(titanic["Age"])
+
+# 行列数
+titanic.shape
+titanic["Age"].shape
+
+# 多列
+titanic[["Age", "Sex"]]
+
+# 过滤row > == != < <=
+above_35 = titanic[titanic["Age"] > 35]     # Age > 35
+above_35.head()
+
+class_23 = titanic[titanic["Pclass"].isin([2, 3])]
+class_23.head()
+
+age_no_na = titanic[titanic["Age"].notna()] # Age非空
+age_no_na.head()
+```

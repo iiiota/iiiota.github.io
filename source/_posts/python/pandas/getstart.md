@@ -260,3 +260,69 @@ class_23.head()
 age_no_na = titanic[titanic["Age"].notna()] # Age非空
 age_no_na.head()
 ```
+
+### loc VS iloc
+
+选择指定的行和列。
+
+```python
+# loc: 标签名索引
+titanic.loc[titanic["Age"] > 35, "Name"]    # 所有Age>35的人名字
+# iloc: 位置索引
+titanic.iloc[9:25, 2:5]                     # row:[9,25) column:[2,5)
+```
+
+
+## Plot
+
+[https://pandas.pydata.org/docs/user_guide/visualization.html#](https://pandas.pydata.org/docs/user_guide/visualization.html#)
+
+### 折线图
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df.plot()           # 简写: df.plot.line()
+df.plot.line()      # 每个column一条折线，x:索引值 y:row值
+df.Age.plot.line()  # 单独column的折线
+```
+
+### 散点图
+
+```python
+df.plot.scatter(x="Q1", y="Q2", alpha=0.5)
+```
+
+### 箱线图
+
+可表示最大值、最小值、平均值。
+
+```python
+df.boxplot()        # 简写: df.plot.box()
+df.plot.box()
+df.plot.box(vert=False, positions=[1, 3, 2, 4])     # 水平显示 自定义排列
+
+df = pd.DataFrame(np.random.rand(10, 2), columns=["Col1", "Col2"])      # 通过X列标签分为两个箱线图
+df["X"] = pd.Series(["A", "A", "A", "A", "A", "B", "B", "B", "B", "B"])
+plt.figure();
+bp = df.boxplot(by="X")
+```
+
+### 面积图
+
+```python
+df.plot.area(figsize=(12, 4), subplots=True)    # figsize:总长宽 subplots:是否column单独显示(plot方法都支持的选项)
+```
+
+
+## statistics
+
+```python
+import pandas as pd
+
+titanic.to_excel("titanic.xlsx", sheet_name="passengers", index=False)
+titanic["Age"].mean()               # 平均数
+titanic[["Age", "Fare"]].median()   # 两column分别的中位数
+titanic[["Age", "Fare"]].describe() # 聚合的统计量
+```
